@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>青年发展型城市评价体系</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="chart" style="width: 100%; height: 1000px;"></div>
+    <script>
+        var chartDom = document.getElementById('chart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            title: {
+                text: '青年发展型城市评价体系',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                triggerOn: 'mousemove'
+            },
+            series: [
+                {
+                    type: 'tree',
+                    data: [
+                        {
+                            name: '青年发展型城市评价体系',
+                            children: [
+                                {
+                                    name: '青年乐居\n(权重)',
+                                    children: [
+                                        {
+                                            name: '住房安居\n(40%)',
+                                            children: [
+                                                {
+                                                    name: '房价收入比\n(60%)',
+                                                    children: [
+                                                        { name: '不同区域房价收入比\n(80%)' },
+                                                        { name: '不同户型房价收入比\n(20%)' }
+                                                    ]
+                                                },
+                                                {
+                                                    name: '青年驿站、青年人才公寓、青年社区等数量\n(40%)',
+                                                    children: [
+                                                        { name: '青年驿站数量\n(30%)' },
+                                                        { name: '青年人才公寓数量\n(30%)' },
+                                                        { name: '青年社区数量\n(40%)' }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: '生活便利\n(35%)',
+                                            children: [
+                                                { name: 'POI 数据生活便利度评价体系\n(35%)' },
+                                                {
+                                                    name: '交通\n(15%)',
+                                                    children: [
+                                                        { name: '地铁站点 500 米半径覆盖率\n(25%)' },
+                                                        { name: '公交站点 300 米半径覆盖率\n(25%)' },
+                                                        { name: '不同区域轨交公交站点覆盖率\n(20%)' },
+                                                        { name: '单程平均通勤时间\n(15%)' },
+                                                        { name: '不同出行方式平均通勤时间\n(10%)' },
+                                                        { name: '高峰时段与非高峰时段的平均通勤时间\n(5%)' },
+                                                        { name: '到达主要商圈的公共交通时间\n(15%)' },
+                                                        { name: '到达主要商圈的自驾时间\n(15%)' },
+                                                        { name: '不同居住区域到商圈的可达性差异\n(10%)' },
+                                                        { name: '夜间公共交通运营时间和线路覆盖\n(10%)' },
+                                                        { name: '夜间道路照明情况\n(5%)' },
+                                                        { name: '夜间治安状况对回家的影响\n(10%)' },
+                                                        { name: '夜间打车的便捷性\n(10%)' }
+                                                    ]
+                                                },
+                                                {
+                                                    name: '医疗\n(15%)',
+                                                    children: [
+                                                        { name: '每万人医院床位数量\n(60%)' },
+                                                        { name: '每万人医师数量\n(40%)' }
+                                                    ]
+                                                },
+                                                { name: '环境\n(10%)', children: [ { name: '不同区域人均绿地面积\n(100%)' } ] },
+                                                { name: '城市数字化发展指数\n(15%)' },
+                                                {
+                                                    name: '法治教育网络安全\n(10%)',
+                                                    children: [
+                                                        { name: '刑事案件发生数量\n(60%)' },
+                                                        { name: '交通事故发生数量\n(40%)' }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: '青年吸引\n(25%)',
+                                            children: [
+                                                {
+                                                    name: '近十年人口增量\n(30%)',
+                                                    children: [
+                                                        { name: '不同年龄段人口增量\n(70%)' },
+                                                        { name: '人口学历结构变化\n(30%)' }
+                                                    ]
+                                                },
+                                                {
+                                                    name: '近一年人口增量\n(30%)',
+                                                    children: [
+                                                        { name: '不同年龄段人口增量\n(70%)' },
+                                                        { name: '人口学历结构变化\n(30%)' }
+                                                    ]
+                                                },
+                                                {
+                                                    name: '青年人口占比\n(20%)',
+                                                    children: [
+                                                        { name: '不同行业青年人口占比\n(50%)' },
+                                                        { name: '不同区域青年人口占比\n(50%)' }
+                                                    ]
+                                                },
+                                                {
+                                                    name: '青春元素\n(10%)',
+                                                    children: [
+                                                        { name: '娱乐设施数量和种类\n(40%)' },
+                                                        { name: '文化活动举办频率和参与度\n(40%)' },
+                                                        { name: '青年社交场所的丰富度\n(20%)' }
+                                                    ]
+                                                },
+                                                {
+                                                    name: '青年专项政策规划数量\n(10%)',
+                                                    children: [
+                                                        { name: '人才引进政策数量和力度\n(50%)' },
+                                                        { name: '社会保障政策覆盖范围和保障水平\n(50%)' }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: '青年活力\n(权重)',
+                                    children: [
+                                        { name: '经济活力指数\n(0.3)' },
+                                        { name: '就业活力指数\n(0.2)' },
+                                        { name: '娱乐活力指数\n(0.3)' },
+                                        { name: '婚姻活力指数\n(0.1)' },
+                                        { name: '交通活力指数\n(0.1)' }
+                                    ]
+                                },
+                                {
+                                    name: '青年立业\n(权重)',
+                                    children: [
+                                        {
+                                            name: '政策环境\n(0.25)',
+                                            children: [
+                                                { name: '一般公共服务支出占比\n(0.08)' },
+                                                { name: '财政科技支出\n(0.08)' },
+                                                { name: '地方教育公开支出\n(0.09)' }
+                                            ]
+                                        },
+                                        {
+                                            name: '市场\n(0.45)',
+                                            children: [
+                                                { name: '人均 GDP\n(0.1)' },
+                                                { name: '职工平均工资\n(0.15)' },
+                                                { name: '每万人本专科大学生数\n(0.07)' },
+                                                { name: '每万人私营企业与个体就业人数\n(0.13)' }
+                                            ]
+                                        },
+                                        {
+                                            name: '创新创业\n(0.3)',
+                                            children: [
+                                                { name: '全社会 R&D 经费支出\n(0.1)' },
+                                                { name: '每万人发明专利授予量\n(0.1)' },
+                                                { name: '全市 R&D 人员数\n(0.1)' }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: '青年有为\n(权重)',
+                                    children: [
+                                        { name: '志愿服务占比\n(20%)' },
+                                        { name: '非遗传承占比\n(15%)' },
+                                        { name: '青年议事会占比\n(30%)' },
+                                        { name: '红色实践占比\n(35%)' }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    top: '5%',
+                    left: '7%',
+                    bottom: '2%',
+                    right: '20%',
+                    symbolSize: 10,
+                    label: {
+                        position: 'left',
+                        verticalAlign: 'middle',
+                        align: 'right',
+                        fontSize: 10
+                    },
+                    leaves: {
+                        label: {
+                            position: 'right',
+                            verticalAlign: 'middle',
+                            align: 'left'
+                        }
+                    },
+                    expandAndCollapse: true,
+                    initialTreeDepth: 2,
+                    animationDuration: 550,
+                    animationDurationUpdate: 750
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+</body>
+</html>
